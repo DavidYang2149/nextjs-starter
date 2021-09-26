@@ -1,0 +1,189 @@
+// Reset
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+small article,
+aside,
+footer,
+header,
+nav,
+address,
+section,
+main,
+time,
+ol,
+ul,
+li,
+hr,
+strong,
+figure,
+tr,
+th,
+td,
+dl,
+dt,
+dd,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-text-size-adjust: none;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+ul,
+ol,
+li,
+dl {
+  list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  @include font-main;
+  outline: 0;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+
+a,
+button {
+  display: inline-block;
+  @include tap-highlight;
+}
+
+hr {
+  display: none;
+}
+
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  @include font-main;
+  border: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  background: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+i {
+  font-style: normal;
+}
+
+a,
+area,
+button,
+[role="button"],
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: inherit;
+}
+
+strong {
+  display: block;
+}
+
+
+input {
+  @include ellipsis;
+  @include font-main;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: top;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border: 1px solid transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+}
+
+
+html {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 62.5%;
+  font-weight: $fw-r;
+
+  @include res--desktop {
+    font-size: 55%;
+  }
+
+  @include res--tablet {
+    font-size: 50%;
+  }
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+  overflow-y: auto;
+  @include font-main;
+  color: $black;
+  text-align: left;
+  font-weight: $fw-r;
+  line-height: 1.5;
+  background-color: $white;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+}

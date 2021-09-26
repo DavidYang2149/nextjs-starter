@@ -1,0 +1,52 @@
+// 폰트 경로
+$path-font: "./assets/fonts/";
+
+$spoqa-fonts: (
+'Thin': 200,
+'Light': 300,
+'Regular': 400,
+'Medium': 500,
+'Bold': 700);
+
+@each $name,
+$weight in $spoqa-fonts {
+  @font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: #{$weight};
+    src: local('Spoqa Han Sans Neo #{$name}'),
+    local('SpoqaHanSansNeo-#{$name}'),
+    url('#{$path-font}SpoqaHanSansNeo/eot/SpoqaHanSansNeo-#{$name}.eot'),
+    url('#{$path-font}SpoqaHanSansNeo/eot/SpoqaHanSansNeo-#{$name}.eot?#iefix') format('embedded-opentype'),
+    url('#{$path-font}SpoqaHanSansNeo/woff/SpoqaHanSansNeo-#{$name}.woff') format('woff'),
+    url('#{$path-font}SpoqaHanSansNeo/woff2/SpoqaHanSansNeo-#{$name}.woff2') format('woff2'),
+    url('#{$path-font}SpoqaHanSansNeo/otf/SpoqaHanSansNeo-#{$name}.otf') format('opentype'),
+    url('#{$path-font}SpoqaHanSansNeo/ttf/SpoqaHanSansNeo-#{$name}.ttf') format('truetype');
+  }
+}
+
+$inter-fonts: (
+'ExtraLight': 100,
+'Thin': 200,
+'Light': 300,
+'Regular': 400,
+'Medium': 500,
+'SemiBold': 600,
+'Bold': 700,
+'ExtraBold': 800,
+'Black': 900);
+
+@each $name,
+$weight in $inter-fonts {
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: #{$weight};
+    src: local('Inter #{$name}'),
+    local('Inter-#{$name}'),
+    url('#{$path-font}Inter/woff/Inter-#{$name}.woff?v=3.19') format('woff'),
+    url('#{$path-font}Inter/woff2/Inter-#{$name}.woff2?v=3.19') format('woff2'),
+    url('#{$path-font}Inter/otf/Inter-#{$name}.otf') format('opentype'),
+    url('#{$path-font}Inter/ttf/Inter-#{$name}.ttf') format('truetype');
+  }
+}
