@@ -1,0 +1,18 @@
+## Node.js
+node_modules
+
+## Babel
+babel.config.js
+
+## Webpack
+webpack.config.js
+
+## ESLint
+.eslintrc.js
+
+## Jest & Test Code
+jest.config.js
+jest.setup.js
+
+## Cypress
+cypress/support
