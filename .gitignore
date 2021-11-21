@@ -1,0 +1,40 @@
+## Mac OS x
+.DS_*
+
+## IntelliJ
+.idea
+
+## VS Code
+.vscode
+
+## Node.js
+node_modules
+
+## Jest
+coverage
+
+## Build
+dist
+build
+
+## Env
+.env
+
+## Sentry
+report.*.json
+
+# next.js
+/.next/
+/out/
+
+# misc
+*.pem
+
+# debug
+npm-debug.log*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo

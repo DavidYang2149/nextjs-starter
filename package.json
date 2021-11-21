@@ -1,0 +1,38 @@
+{
+  "name": "nextjs-starter",
+  "version": "1.0.0",
+  "description": "nextjs starter",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.9",
+    "@types/react": "17.0.35",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.4",
+    "typescript": "4.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidYang2149/nextjs-starter.git"
+  },
+  "keywords": [
+    "nextjs",
+    "starter",
+    "template"
+  ],
+  "author": "davidyang2149",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidYang2149/nextjs-starter/issues"
+  },
+  "homepage": "https://github.com/DavidYang2149/nextjs-starter#readme"
+}
