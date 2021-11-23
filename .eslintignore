@@ -1,0 +1,13 @@
+## Node.js
+node_modules
+
+## Next.js
+next.config.js
+
+## Jest 
+jest.config.js
+jest.setup.js
+
+## Test Code
+__mocks__/fileMock.js
+__mocks__/styleMock.js
