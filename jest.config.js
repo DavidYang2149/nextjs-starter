@@ -13,7 +13,18 @@ module.exports = {
     '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$':
       '<rootDir>/__mocks__/fileMock.js',
   },
-  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
+  coveragePathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/coverage/',
+    '<rootDir>/.next/',
+    'jest.config.js',
+    'next.config.js',
+    '_app',
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/.next/'
+  ],
   testEnvironment: 'jsdom',
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
