@@ -10,9 +10,14 @@ module.exports = {
   moduleNameMapper: {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
     '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
-    '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$':
-      '<rootDir>/__mocks__/fileMock.js',
+    '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$': '<rootDir>/__mocks__/fileMock.js',
+    '^pages/(.*)$': '<rootDir>/pages/$1',
+    '^src/(.*)$': '<rootDir>/src/$1'
   },
+  testMatch: [
+    '**/__tests__/**/*.test.[jt]s?(x)',
+    '**/src/**/*.test.[jt]s?(x)',
+  ],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/coverage/',
