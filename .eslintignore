@@ -8,6 +8,9 @@ next.config.js
 jest.config.js
 jest.setup.js
 
+# Cypress
+Cypress
+
 ## Test Code
 __mocks__/fileMock.js
 __mocks__/styleMock.js
