@@ -4,6 +4,6 @@
 ## 사용기술 
 - Next
 - React
-- Redux
 - Typescript
-- Emotion
+- Jest
+- Cypress
