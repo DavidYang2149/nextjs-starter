@@ -21,6 +21,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/coverage/',
+    '<rootDir>/cypress/',
     '<rootDir>/.next/',
     'jest.config.js',
     'next.config.js',
