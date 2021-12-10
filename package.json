@@ -1,6 +1,6 @@
 {
   "name": "nextjs-starter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "nextjs starter",
   "scripts": {
     "dev": "next dev",
