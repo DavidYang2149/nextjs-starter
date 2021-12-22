@@ -13,6 +13,9 @@ node_modules
 ## Jest
 coverage
 
+# Cypress
+cypress/screenshots
+
 ## Build
 dist
 build
