@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { IncomingMessage, ServerResponse } from 'http';
-import { apiResolver } from 'next/dist/server/api-utils';
+import { apiResolver } from 'next/dist/server/api-utils/node';
 
 interface Props {
   query?: unknown;
