@@ -1,9 +1,45 @@
 # Nextjs starter
-- Nextjs starter
+- Nextjs starter kit
 
-## 사용기술 
+## Tech stack 
 - Next
 - React
 - Typescript
 - Jest
 - Cypress
+
+## 📚 Install dependencies
+
+```sh
+npm install
+```
+
+## Run dev server
+
+```sh
+npm run dev
+```
+
+## Lint and fix
+
+```sh
+npm run lint
+```
+
+## Run Coverage
+
+```sh
+npm run test:unit
+
+# running option
+npm run test
+```
+
+## Run E2E tests
+
+```sh
+npm run e2e
+
+# headless option
+npm run e2e:headless
+```
