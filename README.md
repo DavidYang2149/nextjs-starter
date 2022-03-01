@@ -43,3 +43,7 @@ npm run e2e
 # headless option
 npm run e2e:headless
 ```
+
+## Special thanks to
+
+<a href="https://jb.gg/OpenSourceSupport"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" alt="JetBrains Logo" width="260"></a>
