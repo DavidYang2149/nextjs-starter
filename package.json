@@ -1,7 +1,10 @@
 {
-  "name": "nextjs-starter",
+  "name": "@davidyang2149/nextjs-starter",
   "version": "1.0.6",
   "description": "nextjs starter",
+  "bin": { 
+    "@davidyang2149/nextjs-starter": "./bin/create-nextjs-starter.js"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

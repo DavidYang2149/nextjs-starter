@@ -14,3 +14,6 @@ Cypress
 ## Test Code
 __mocks__/fileMock.js
 __mocks__/styleMock.js
+
+## npm
+bin
