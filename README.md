@@ -8,6 +8,12 @@
 - Jest
 - Cypress
 
+## 🚀 Quick start
+
+```sh
+npx @davidyang2149/nextjs-starter your-project-folder-name
+```
+
 ## 📚 Install dependencies
 
 ```sh
