@@ -1,17 +1,19 @@
-# Nextjs starter
-- Nextjs starter kit
+# Next.js starter
+- Next.js starter kit
 
-## Tech stack 
+## 💎 Tech stack 
 - Next
 - React
 - Typescript
+- ESLint
 - Jest
+- testing-library
 - Cypress
 
 ## 🚀 Quick start
 
 ```sh
-npx @davidyang2149/nextjs-starter your-project-folder-name
+npx @davidyang2149/nextjs-starter <project-directory>
 ```
 
 ## 📚 Install dependencies

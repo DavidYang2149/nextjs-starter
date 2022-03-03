@@ -1,7 +1,7 @@
 {
   "name": "@davidyang2149/nextjs-starter",
-  "version": "2.0.1",
-  "description": "nextjs starter",
+  "version": "2.0.2",
+  "description": "Next.js starter with TypeScript, Jest, Testing-Library, Cypress",
   "bin": {
     "@davidyang2149/nextjs-starter": "./bin/create-nextjs-starter.js"
   },
@@ -52,9 +52,16 @@
     "url": "git+https://github.com/DavidYang2149/nextjs-starter.git"
   },
   "keywords": [
+    "Next.js",
     "nextjs",
+    "Next.js starter",
+    "nextjs starter",
     "starter",
-    "template"
+    "typescript",
+    "eslint",
+    "jest",
+    "testing-library",
+    "cypress"
   ],
   "author": "davidyang2149",
   "license": "MIT",
