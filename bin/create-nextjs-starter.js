@@ -63,7 +63,7 @@ async function main() {
     console.log("⭐ Next.js Starter Kit ⭐");
     console.log("🥰 Create by davidyang2149");
     console.log("🚀 From https://github.com/DavidYang2149/nextjs-starter");
-    console.log("🏷️ Version: 2.0.4");
+    console.log("🏷️ Version: 2.0.5");
     console.log("");
     console.log(`🚀 Creating project ${projectName}...`);
     console.log("");
