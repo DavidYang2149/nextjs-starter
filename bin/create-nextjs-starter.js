@@ -22,6 +22,7 @@ const projectName = process.argv[2];
 const currentPath = process.cwd();
 const projectPath = path.join(currentPath, projectName);
 const GIT_REPOSITORY = "https://github.com/DavidYang2149/nextjs-starter";
+const gitCloneCommand = ["clone", "--depth", "1", GIT_REPOSITORY, projectPath];
 
 if (projectName !== ".") {
   try {
@@ -67,7 +68,7 @@ async function main() {
     console.log(`🚀 Creating project ${projectName}...`);
     console.log("");
     console.log("🚚 Downloading files:");
-    execSync(`git clone --depth 1 ${GIT_REPOSITORY} ${projectPath}`);
+    execSync("git", gitCloneCommand);
     
     if (projectName !== ".") {
       process.chdir(projectPath);
