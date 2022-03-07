@@ -23,6 +23,9 @@ const currentPath = process.cwd();
 const projectPath = path.join(currentPath, projectName);
 const GIT_REPOSITORY = "https://github.com/DavidYang2149/nextjs-starter";
 
+const gitCloneOrderArray = ["git", "clone", "--depth", "1", GIT_REPOSITORY, projectPath];
+const gitCloneCommand = gitCloneOrderArray.map((item) => item.replace(/\s/g,'')).join(" ");
+
 if (projectName !== ".") {
   try {
     fs.mkdirSync(projectPath);
@@ -63,12 +66,12 @@ async function main() {
     console.log("⭐ Next.js Starter Kit ⭐");
     console.log("🥰 Create by davidyang2149");
     console.log("🚀 From https://github.com/DavidYang2149/nextjs-starter");
-    console.log("🏷️ Version: 2.0.5");
+    console.log("🏷️ Version: 2.0.6");
     console.log("");
     console.log(`🚀 Creating project ${projectName}...`);
     console.log("");
     console.log("🚚 Downloading files:");
-    execSync(`git clone --depth 1 ${GIT_REPOSITORY} ${projectPath}`);
+    execSync(gitCloneCommand);
     
     if (projectName !== ".") {
       process.chdir(projectPath);
