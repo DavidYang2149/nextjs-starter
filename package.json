@@ -1,6 +1,6 @@
 {
   "name": "@davidyang2149/nextjs-starter",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Next.js starter with TypeScript, Jest, Testing-Library, Cypress",
   "bin": {
     "@davidyang2149/nextjs-starter": "./bin/create-nextjs-starter.js"
