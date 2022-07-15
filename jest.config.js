@@ -24,6 +24,7 @@ module.exports = {
   ],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
+    '<rootDir>/bin/',
     '<rootDir>/coverage/',
     '<rootDir>/cypress/',
     '<rootDir>/.next/',
