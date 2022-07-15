@@ -20,6 +20,9 @@ cypress/screenshots
 dist
 build
 
+## SWC
+.swc
+
 ## Env
 .env
 
