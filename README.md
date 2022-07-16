@@ -9,13 +9,13 @@ npx @davidyang2149/nextjs-starter <project-directory>
 ```
 
 ## 💎 Tech stack 
-- Next
+- TypeScript
+- Next.js
 - React
-- Typescript
-- ESLint
 - Jest
-- testing-library
+- Testing Library
 - Cypress
+- ESLint
 
 ## 📚 Install dependencies
 
