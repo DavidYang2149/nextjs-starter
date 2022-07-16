@@ -1,5 +1,6 @@
 # Next.js starter
-- [Next.js starter kit](https://github.com/DavidYang2149/nextjs-starter)
+- GitHub: [Next.js starter kit](https://github.com/DavidYang2149/nextjs-starter)
+- npm: [Download](https://www.npmjs.com/package/@davidyang2149/nextjs-starter)
 
 ## 🚀 Quick start
 
@@ -8,13 +9,26 @@ npx @davidyang2149/nextjs-starter <project-directory>
 ```
 
 ## 💎 Tech stack 
-- Next
+- TypeScript
+- Next.js
 - React
-- Typescript
-- ESLint
 - Jest
-- testing-library
+- Testing Library
 - Cypress
+- ESLint
+
+## 🔖 Node Version in project
+
+```sh
+# .nvmrc
+v16.15.0
+```
+If you want to manage nvm. recommand to use [fnm(Fast Node Manager)](https://github.com/Schniz/fnm)
+
+```sh
+# use Homebrew
+brew install fnm
+```
 
 ## 📚 Install dependencies
 
