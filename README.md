@@ -17,6 +17,19 @@ npx @davidyang2149/nextjs-starter <project-directory>
 - Cypress
 - ESLint
 
+## 🔖 Node Version in project
+
+```sh
+# .nvmrc
+v16.15.0
+```
+If you want to manage nvm. recommand to use [fnm(Fast Node Manager)](https://github.com/Schniz/fnm)
+
+```sh
+# use Homebrew
+brew install fnm
+```
+
 ## 📚 Install dependencies
 
 ```sh
