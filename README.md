@@ -1,5 +1,6 @@
 # Next.js starter
-- [Next.js starter kit](https://github.com/DavidYang2149/nextjs-starter)
+- GitHub: [Next.js starter kit](https://github.com/DavidYang2149/nextjs-starter)
+- npm: [Download](https://www.npmjs.com/package/@davidyang2149/nextjs-starter)
 
 ## 🚀 Quick start
 
