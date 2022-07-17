@@ -90,6 +90,8 @@ async function main() {
     log('🔥 Removing useless files:');
     execSync('npx rimraf ./.git');
     log('');
+    execSync(`npx rimraf ./bin`);
+    log('');
     log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
     log('');
     log('\x1b[35m%s\x1b[0m', '🎉 The installation is done, ready to use. Happy coding!');
