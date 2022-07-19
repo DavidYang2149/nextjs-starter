@@ -85,10 +85,16 @@ async function main() {
     log('🥰 Download completed!');
     log('');
 
-    const starterVersion = require('./package.json').version;
-    log(`🏷️ Version: ${starterVersion}`);
+    try {
+      fs.readFile('./package.json', 'utf8', (err, data) => {
+        const { version } = JSON.parse(data);
+        log(`🏷️ Version: ${version}`);
+      });
+    } catch (error) {
+      log(error);
+    }
+    
     log('');
-
     log('📦 Installing dependencies:');
     execSync('npm install');
     log('');
