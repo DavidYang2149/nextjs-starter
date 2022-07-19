@@ -72,7 +72,6 @@ async function main() {
     log('⭐ Next.js Starter Kit ⭐');
     log('🥰 Create by davidyang2149');
     log('🚀 From https://github.com/DavidYang2149/nextjs-starter');
-    log('🏷️ Version: 2.0.6');
     log('');
     log(`🚀 Creating project ${projectName}...`);
     log('');
@@ -83,7 +82,13 @@ async function main() {
       process.chdir(projectPath);
     }
     
+    log('🥰 Download completed!');
     log('');
+
+    const starterVersion = require('./package.json').version;
+    log(`🏷️ Version: ${starterVersion}`);
+    log('');
+
     log('📦 Installing dependencies:');
     execSync('npm install');
     log('');
