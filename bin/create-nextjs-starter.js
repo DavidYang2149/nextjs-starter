@@ -58,16 +58,16 @@ async function main() {
     log('Using npm.');
     log('');
     log('Installing dependencies:');
-    log('\x1b[32m%s\x1b[0m', '- react');
-    log('\x1b[32m%s\x1b[0m', '- react-dom');
-    log('\x1b[32m%s\x1b[0m', '- next');
+    log('\x1b[32m%s\x1b[0m', '- Next.js');
+    log('\x1b[32m%s\x1b[0m', '- React');
+    log('\x1b[32m%s\x1b[0m', '- React-DOM');
     log('');
     log('Installing devDependencies:');
-    log('\x1b[32m%s\x1b[0m', '- typescript');
-    log('\x1b[32m%s\x1b[0m', '- eslint');
-    log('\x1b[32m%s\x1b[0m', '- jest');
-    log('\x1b[32m%s\x1b[0m', '- testing-library');
-    log('\x1b[32m%s\x1b[0m', '- cypress');
+    log('\x1b[32m%s\x1b[0m', '- TypeScript');
+    log('\x1b[32m%s\x1b[0m', '- ESLint');
+    log('\x1b[32m%s\x1b[0m', '- Jest');
+    log('\x1b[32m%s\x1b[0m', '- Testing-Library');
+    log('\x1b[32m%s\x1b[0m', '- Cypress');
     log('');
     log('⭐ Next.js Starter Kit ⭐');
     log('🥰 Create by davidyang2149');
@@ -94,7 +94,6 @@ async function main() {
       log(error);
     }
     
-    log('');
     log('📦 Installing dependencies:');
     execSync('npm install');
     log('');
@@ -109,6 +108,7 @@ async function main() {
     log('');
     log('\x1b[35m%s\x1b[0m', '🎉 The installation is done, ready to use. Happy coding!');
     log('========================= 🎉 E N D 🎉 =========================');
+    log('');
   } catch (error) {
     log('\x1b[31m%s\x1b[0m', errorStartLine);
     log(error);
