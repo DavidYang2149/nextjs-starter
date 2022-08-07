@@ -1,0 +1,21 @@
+name: ESLint
+
+on:
+  pull_request:
+      branches:
+      - '*'
+      - '!gh-pages'   # excludes gh-pages
+
+jobs:
+  eslint-run:
+    name: Lint Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install a project with a clean slate
+        run: |
+          npm ci
+
+      - name: ESLint Check Start # ESLint 검사
+        run: npm run lint
