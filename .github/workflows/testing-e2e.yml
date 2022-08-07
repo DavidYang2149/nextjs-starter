@@ -1,0 +1,35 @@
+name: E2E Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+      branches:
+      - '*'
+      - '!gh-pages'   # excludes gh-pages
+
+jobs:
+  e2e-test-run:
+    name: Run on Chrome Latest
+    runs-on: ubuntu-latest
+    container:
+      image:  cypress/browsers:latest
+      options: --user 1001  # ← THIS IS THE IMPORTANT LINE!
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install a project with a clean slate
+        run: |
+          npm ci
+          $(npm bin)/cypress cache path
+          $(npm bin)/cypress cache list
+          $(npm bin)/cypress verify
+
+      - name: Run E2E tests
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          start: |
+            ls -al
+            npm run dev
+          wait-on: http://localhost:3000
