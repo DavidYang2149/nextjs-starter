@@ -15,6 +15,7 @@ coverage
 
 # Cypress
 cypress/screenshots
+cypress/videos
 
 ## Build
 dist

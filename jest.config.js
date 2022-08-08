@@ -31,6 +31,7 @@ module.exports = {
     '<rootDir>/out/',
     'jest.config.js',
     'next.config.js',
+    'cypress.config.ts',
     '_app',
   ],
   testPathIgnorePatterns: [
