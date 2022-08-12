@@ -58,8 +58,15 @@ const setupPackage = (projectName, projectPath, version) => {
   
   log('🥰 Download completed!');
   log('');
+
+  let version = '';
+  fs.readFile('./package.json', 'utf8', (err, data) => {
+    version = JSON.parse(data).version;
+  });
+
   log(`🏷️ Version: ${version}`);
   log('');
+
   log('📦 Installing dependencies:');
   execSync('npm install');
   log('');
