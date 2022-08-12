@@ -58,8 +58,15 @@ const setupPackage = (projectName, projectPath, version) => {
   
   log('🥰 Download completed!');
   log('');
+
+  let version = '';
+  fs.readFile('./package.json', 'utf8', (err, data) => {
+    version = JSON.parse(data).version;
+  });
+
   log(`🏷️ Version: ${version}`);
   log('');
+
   log('📦 Installing dependencies:');
   execSync('npm install');
   log('');
@@ -69,7 +76,7 @@ const setupPackage = (projectName, projectPath, version) => {
 
   fs.rmdirSync('./.git', { recursive: true });
   fs.rmdirSync('./bin', { recursive: true });
-  fs.rmdirSync('./github', { recursive: true });
+  fs.rmdirSync('./.github', { recursive: true });
   log('');
   log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
   log('');

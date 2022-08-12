@@ -5,11 +5,9 @@ const { program } = require('commander');
 
 const { log } = console;
 
-const { version } = require('./constants');
 const { setupFolder, setupPackage } = require('./validator');
 
 program
-  .version(version, '-v --version')
   .arguments('<projectname>', 'Project name')
   .action((projectname) => {
     const currentPath = process.cwd();
