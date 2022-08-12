@@ -14,7 +14,7 @@ program
     const projectPath = path.join(currentPath, projectname);
 
     setupFolder(projectPath);
-    setupPackage(projectname, projectPath, version);
+    setupPackage(projectname, projectPath);
   });
 
 program.parse(process.argv);

@@ -27,7 +27,7 @@ const setupFolder = (projectPath) => {
   }
 };
 
-const setupPackage = (projectName, projectPath, version) => {
+const setupPackage = (projectName, projectPath) => {
   log('========================= 🚀 S T A R T 🚀 =========================');
   log('Using npm...');
   log('');
