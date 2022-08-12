@@ -10,17 +10,13 @@ const { setupFolder, setupPackage } = require('./validator');
 
 program
   .version(version, '-v --version')
-  .name('@davidyang2149/nextjs-starter');
-
-program
-  .command('<project_name>')
-  .description('Initialize project')
-  .action((projectName, options) => {
+  .arguments('<projectname>', 'Project name')
+  .action((projectname) => {
     const currentPath = process.cwd();
-    const projectPath = path.join(currentPath, projectName);
+    const projectPath = path.join(currentPath, projectname);
 
     setupFolder(projectPath);
-    setupPackage(projectName, projectPath, version);
+    setupPackage(projectname, projectPath, version);
   });
 
 program.parse(process.argv);
