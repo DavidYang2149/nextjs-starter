@@ -59,14 +59,6 @@ const setupPackage = (projectName, projectPath) => {
   log('🥰 Download completed!');
   log('');
 
-  let version = '';
-  fs.readFileSync('./package.json', 'utf8', (err, data) => {
-    version = JSON.parse(data).version;
-  });
-
-  log(`🏷️ Version: ${version}`);
-  log('');
-
   log('📦 Installing dependencies:');
   execSync('npm install');
   log('');
@@ -83,6 +75,13 @@ const setupPackage = (projectName, projectPath) => {
   log('\x1b[35m%s\x1b[0m', '🎉 The installation is done, ready to use. Happy coding!');
   log('========================= 🎉 E N D 🎉 =========================');
   log('');
+
+  fs.readFile('./package.json', 'utf8', (err, data) => {
+    const { version } = JSON.parse(data);
+    log(`🏷️ Version: ${version}`);
+  });
+  log('');
+
 };
 
 module.exports = { setupFolder, setupPackage };
