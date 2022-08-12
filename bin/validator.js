@@ -74,9 +74,9 @@ const setupPackage = (projectName, projectPath) => {
   fs.unlinkSync(path.join(projectPath, 'SECURITY.md'));
   fs.unlinkSync(path.join(projectPath, 'LICENSE'));
 
-  fs.rmdirSync('./.git', { recursive: true });
-  fs.rmdirSync('./bin', { recursive: true });
-  fs.rmdirSync('./.github', { recursive: true });
+  fs.rmSync('./.git', { recursive: true });
+  fs.rmSync('./bin', { recursive: true });
+  fs.rmSync('./.github', { recursive: true });
   log('');
   log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
   log('');
