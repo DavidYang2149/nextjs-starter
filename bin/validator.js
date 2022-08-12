@@ -60,7 +60,7 @@ const setupPackage = (projectName, projectPath) => {
   log('');
 
   let version = '';
-  fs.readFile('./package.json', 'utf8', (err, data) => {
+  fs.readFileSync('./package.json', 'utf8', (err, data) => {
     version = JSON.parse(data).version;
   });
 
