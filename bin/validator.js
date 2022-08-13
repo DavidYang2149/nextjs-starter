@@ -68,7 +68,6 @@ const setupPackage = (projectName, projectPath) => {
 
   fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./bin', { recursive: true });
-  fs.rmSync('./.github', { recursive: true });
   log('');
   log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
   log('');
@@ -80,8 +79,6 @@ const setupPackage = (projectName, projectPath) => {
     const { version } = JSON.parse(data);
     log(`🏷️ Version: ${version}`);
   });
-  log('');
-
 };
 
 module.exports = { setupFolder, setupPackage };
