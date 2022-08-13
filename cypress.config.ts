@@ -7,4 +7,10 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
+  video: true,
+  chromeWebSecurity: false,
+  reporter: 'cypress-multi-reporters',
+  reporterOptions: {
+    configFile: 'reporter-config.json',
+  },
 });
