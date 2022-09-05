@@ -68,6 +68,9 @@ const setupPackage = (projectName, projectPath) => {
 
   fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./bin', { recursive: true });
+
+  execSync('npm uninstall commander');
+
   log('');
   log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
   log('');
