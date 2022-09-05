@@ -1,9 +1,6 @@
 #!/usr/bin/env node
-const fs = require('fs');
 const path = require('path');
 const { program } = require('commander');
-
-const { log } = console;
 
 const { setupFolder, setupPackage } = require('./validator');
 
