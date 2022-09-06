@@ -66,6 +66,13 @@ npm run e2e
 npm run e2e:headless
 ```
 
+## Use E2E test report
+
+When open Pull Request, you can use an e2e testing report by GitHub Actions.
+Set GitHub Pages in your repository.
+
+![](https://user-images.githubusercontent.com/40143056/188051599-4e926b7c-2c7f-435b-8c39-4d371b64fa22.png)
+
 ## 🤝 Special thanks to
 
 <a href="https://jb.gg/OpenSourceSupport"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" alt="JetBrains Logo" width="260"></a>
