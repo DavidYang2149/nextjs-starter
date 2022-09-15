@@ -3,18 +3,14 @@
  */
 
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import Home from 'src/pages/index';
 
 describe('Home', () => {
   it('renders a heading', () => {
-    render(<Home />);
+    const { container } = render(<Home />);
 
-    const heading = screen.getByRole('heading', {
-      name: /welcome to next\.js!/i,
-    });
-
-    expect(heading).toBeInTheDocument();
+    expect(container).toHaveTextContent(/welcome to next\.js!/i);
   });
 });
