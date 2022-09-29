@@ -15,7 +15,7 @@ jobs:
 
       - name: Install a project with a clean slate
         run: |
-          npm ci
+          npm ci --force
 
       - name: ESLint Check Start # ESLint 검사
         run: npm run lint

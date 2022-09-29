@@ -16,7 +16,7 @@ jobs:
 
       - name: Install a project with a clean slate
         run: |
-          npm ci
+          npm ci --force
 
       - name: Unit Test   # 유닛 테스트 진행
         run: npm run test:unit
