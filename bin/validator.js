@@ -63,6 +63,7 @@ const setupPackage = (projectName, projectPath) => {
   execSync('npm install');
   log('');
   log('🔥 Removing useless files:');
+  fs.unlinkSync(path.join(projectPath, 'CONTRIBUTING.md'));
   fs.unlinkSync(path.join(projectPath, 'SECURITY.md'));
   fs.unlinkSync(path.join(projectPath, 'LICENSE'));
 
