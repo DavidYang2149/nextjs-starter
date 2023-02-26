@@ -29,9 +29,7 @@ const setupFolder = (projectPath) => {
 
 const setupPackage = (projectName, projectPath) => {
   log('========================= 🚀 S T A R T 🚀 =========================');
-  // log('Using pnpm...');
-  // log('');
-
+  
   log('dependencies:');
   log('\x1b[32m%s\x1b[0m', '- Next.js');
   log('\x1b[32m%s\x1b[0m', '- React');
@@ -64,11 +62,6 @@ const setupPackage = (projectName, projectPath) => {
   log('🥰 Download completed!');
   log('');
 
-  // TODO: use pnpm
-  // log('📦 Installing dependencies:');
-  // execSync('pnpm install');
-  // log('');
-
   log('🔥 Removing useless files:');
   fs.unlinkSync(path.join(projectPath, 'CONTRIBUTING.md'));
   fs.unlinkSync(path.join(projectPath, 'SECURITY.md'));
@@ -77,14 +70,9 @@ const setupPackage = (projectName, projectPath) => {
   fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./bin', { recursive: true });
 
-  // TODO: use pnpm
-  // execSync('npm uninstall commander');
-  // log('');
-
   log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
   log('');
 
-  // log('\x1b[35m%s\x1b[0m', '🎉 The installation is done, ready to use. Happy coding!');
   log('\x1b[35m%s\x1b[0m', '🎉 Setting is done, ready to use. Please type "pnpm install". Happy coding!');
   log('========================= 🎉 E N D 🎉 =========================');
   log('');
