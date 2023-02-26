@@ -29,13 +29,15 @@ const setupFolder = (projectPath) => {
 
 const setupPackage = (projectName, projectPath) => {
   log('========================= 🚀 S T A R T 🚀 =========================');
-  log('Using npm...');
+  log('Using pnpm...');
   log('');
+
   log('Installing dependencies:');
   log('\x1b[32m%s\x1b[0m', '- Next.js');
   log('\x1b[32m%s\x1b[0m', '- React');
   log('\x1b[32m%s\x1b[0m', '- React-DOM');
   log('');
+
   log('Installing devDependencies:');
   log('\x1b[32m%s\x1b[0m', '- TypeScript');
   log('\x1b[32m%s\x1b[0m', '- ESLint');
@@ -43,12 +45,15 @@ const setupPackage = (projectName, projectPath) => {
   log('\x1b[32m%s\x1b[0m', '- Testing-Library');
   log('\x1b[32m%s\x1b[0m', '- Cypress');
   log('');
+
   log('⭐ Next.js Starter Kit ⭐');
   log('🥰 Create by davidyang2149');
   log('🚀 From https://github.com/DavidYang2149/nextjs-starter');
   log('');
+
   log(`🚀 Creating project ${projectName}...`);
   log('');
+
   log('🚚 Downloading files:');
   execSync(`git clone --depth 1 https://github.com/DavidYang2149/nextjs-starter ${projectName}`);
 
@@ -60,8 +65,9 @@ const setupPackage = (projectName, projectPath) => {
   log('');
 
   log('📦 Installing dependencies:');
-  execSync('npm install');
+  execSync('pnpm install');
   log('');
+
   log('🔥 Removing useless files:');
   fs.unlinkSync(path.join(projectPath, 'CONTRIBUTING.md'));
   fs.unlinkSync(path.join(projectPath, 'SECURITY.md'));
@@ -70,11 +76,12 @@ const setupPackage = (projectName, projectPath) => {
   fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./bin', { recursive: true });
 
-  execSync('npm uninstall commander');
-
+  execSync('pnpm uninstall commander');
   log('');
+
   log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
   log('');
+
   log('\x1b[35m%s\x1b[0m', '🎉 The installation is done, ready to use. Happy coding!');
   log('========================= 🎉 E N D 🎉 =========================');
   log('');

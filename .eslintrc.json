@@ -13,39 +13,21 @@
     "node": true
   },
   "rules": {
-    "indent": [
-      "error",
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ],
+    "indent": [ "error", 2, { "SwitchCase": 1 } ],
     "no-trailing-spaces": "error",
     "curly": "error",
     "brace-style": "off",
-    "@typescript-eslint/brace-style": [
-      "error"
-    ],
+    "@typescript-eslint/brace-style": [ "error" ],
     "no-multi-spaces": "error",
     "space-infix-ops": "off",
-    "@typescript-eslint/space-infix-ops": [
-      "error"
-    ],
+    "@typescript-eslint/space-infix-ops": [ "error" ],
     "space-unary-ops": "error",
     "no-whitespace-before-property": "error",
     "func-call-spacing": "off",
-    "@typescript-eslint/func-call-spacing": [
-      "error"
-    ],
+    "@typescript-eslint/func-call-spacing": [ "error" ],
     "space-before-blocks": "error",
     "keyword-spacing": "off",
-    "@typescript-eslint/keyword-spacing": [
-      "error",
-      {
-        "before": true,
-        "after": true
-      }
-    ],
+    "@typescript-eslint/keyword-spacing": [ "error", { "before": true, "after": true } ],
     "comma-spacing": "off",
     "@typescript-eslint/comma-spacing": [
       "error",
@@ -89,7 +71,6 @@
         "after": true
       }
     ],
-    // "arrow-body-style": ["error", "always"],
     "arrow-body-style": 0,
     "jsx-a11y/label-has-associated-control": [
       "error",
@@ -102,9 +83,7 @@
     "linebreak-style": "off",
     "no-proto": "off",
     "semi": "off",
-    "@typescript-eslint/semi": [
-      "error"
-    ],
+    "@typescript-eslint/semi": [ "error" ],
     "react/jsx-filename-extension": [
       1,
       {
@@ -128,22 +107,16 @@
     "max-len": [
       "error",
       {
-        "code": 140
+        "code": 150
       }
     ],
     "no-alert": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/function-component-definition": [
-      2,
-      {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }
-    ],
+    "react/jsx-one-expression-per-line": [0],
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
-    "import/no-cycle": "off"
+    "@typescript-eslint/no-use-before-define": [ "error" ],
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "@next/next/no-html-link-for-pages": [ "error", "./app/" ]
   }
 }

@@ -1,7 +1,11 @@
-module.exports = {
-  modulePaths: [
-    "<rootDir>",
-  ],
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+/** @type {import('jest').Config} */
+const customJestConfig = {
   setupFilesAfterEnv: [
     'jest-plugin-context/setup',
     '<rootDir>/jest.setup.js'
@@ -11,16 +15,13 @@ module.exports = {
     '!**/*.d.ts',
     '!**/node_modules/**',
   ],
+  moduleDirectories: ['node_modules', '<rootDir>/'],
   moduleNameMapper: {
-    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
-    '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
-    '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$': '<rootDir>/__mocks__/fileMock.js',
-    '^pages/(.*)$': '<rootDir>/pages/$1',
-    '^src/(.*)$': '<rootDir>/src/$1'
+    '^app/(.*)$': '<rootDir>/app/$1',
   },
   testMatch: [
     '**/__tests__/**/*.test.[jt]s?(x)',
-    '**/src/**/*.test.[jt]s?(x)',
+    '**/app/**/*.test.[jt]s?(x)',
   ],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
@@ -32,19 +33,15 @@ module.exports = {
     'jest.config.js',
     'next.config.js',
     'cypress.config.ts',
-    '_app',
+    '<rootDir>/app/head.tsx',
+    '<rootDir>/app/layout.tsx',
   ],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/.next/',
     '<rootDir>/out/',
   ],
-  testEnvironment: 'jsdom',
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
-  },
-  transformIgnorePatterns: [
-    '/node_modules/',
-    '^.+\\.module\\.(css|sass|scss)$',
-  ],
+  testEnvironment: 'jest-environment-jsdom',
 }
+
+module.exports = createJestConfig(customJestConfig);
