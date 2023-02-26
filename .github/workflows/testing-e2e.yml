@@ -16,14 +16,34 @@ jobs:
       options: --user 1001  # ← THIS IS THE IMPORTANT LINE!
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Install a project with a clean slate
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
         run: |
-          npm ci
-          $(npm bin)/cypress cache path
-          $(npm bin)/cypress cache list
-          $(npm bin)/cypress verify
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Run E2E tests
         uses: cypress-io/github-action@v4
@@ -31,23 +51,24 @@ jobs:
           browser: chrome
           start: |
             ls -al
-            npm run dev
+            pnpm run dev
           wait-on: http://localhost:3000
         continue-on-error: true
 
-      - name: Copy test execution videos
-        run: |
-          cp -r cypress/videos public/videos
-      - name: Merge test results into one
-        run: npm run report:merge
+      # TODO: Create Report page
+      # - name: Copy test execution videos
+      #   run: |
+      #     cp -r cypress/videos public/videos
+      # - name: Merge test results into one
+      #   run: pnpm run report:merge
 
-      - name: Generate HTML report
-        run: npm run report:generate
+      # - name: Generate HTML report
+      #   run: pnpm run report:generate
 
-      - name: Deploy report page
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+      # - name: Deploy report page
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./public
+      #     user_name: 'github-actions[bot]'
+      #     user_email: 'github-actions[bot]@users.noreply.github.com'
