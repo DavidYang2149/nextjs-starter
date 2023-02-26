@@ -21,7 +21,7 @@ npx @davidyang2149/nextjs-starter <project-directory>
 
 ```sh
 # .nvmrc
-v16.15.0
+v18.14.0
 ```
 If you want to manage nvm. recommend to use [fnm(Fast Node Manager)](https://github.com/Schniz/fnm)
 
