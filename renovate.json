@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "labels": [":robot: Dependencies"],
+  "assignees": ["DavidYang2149"],
+  "baseBranches": ["main"],
   "extends": [
     "config:base"
   ]
