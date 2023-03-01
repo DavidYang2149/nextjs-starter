@@ -3,6 +3,7 @@
   "labels": [":robot: Dependencies"],
   "assignees": ["DavidYang2149"],
   "baseBranches": ["main"],
+  "rebaseWhen": "behind-base-branch",
   "extends": [
     "config:base"
   ]
