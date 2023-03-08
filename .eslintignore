@@ -10,6 +10,7 @@ jest.setup.js
 
 # Cypress
 Cypress
+cypress.config.ts
 
 ## Test Code
 __mocks__/fileMock.js
@@ -17,3 +18,7 @@ __mocks__/styleMock.js
 
 ## npm
 bin
+
+# Tailwind
+postcss.config.js
+tailwind.config.js
