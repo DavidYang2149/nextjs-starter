@@ -68,7 +68,7 @@ const setupPackage = (projectName, projectPath) => {
   fs.unlinkSync(path.join(projectPath, 'LICENSE'));
   fs.unlinkSync(path.join(projectPath, 'renovate.json'));
 
-  fs.rmSync('./github', { recursive: true });
+  fs.rmSync('./.github', { recursive: true });
   fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./bin', { recursive: true });
 
