@@ -14,10 +14,8 @@
     "test:unit": "jest",
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
-    "e2e": "start-server-and-test dev http://127.0.0.1:3000 cypress",
-    "e2e:headless": "start-server-and-test 'pnpm dev' http://127.0.0.1:3000 'pnpm cypress:headless'",
-    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
-    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+    "e2e": "start-server-and-test 'pnpm run start' http://127.0.0.1:3000 'pnpm run cypress'",
+    "e2e:headless": "start-server-and-test 'pnpm run start' http://127.0.0.1:3000 'pnpm run cypress:headless'"
   },
   "dependencies": {
     "commander": "^10.0.0",
