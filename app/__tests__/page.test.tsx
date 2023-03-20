@@ -12,7 +12,7 @@ describe('메인화면', () => {
     it('타이틀을 확인합니다', () => {
       const { container } = render(<Home />);
 
-      expect(container).toHaveTextContent(/Get started by editing/i);
+      expect(container).toHaveTextContent(/Hello world!/i);
     });
   });
 });

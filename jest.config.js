@@ -33,6 +33,8 @@ const customJestConfig = {
     'jest.config.js',
     'next.config.js',
     'cypress.config.ts',
+    'postcss.config.js',
+    'tailwind.config.js',
     '<rootDir>/app/head.tsx',
     '<rootDir>/app/layout.tsx',
   ],
