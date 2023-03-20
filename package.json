@@ -14,8 +14,8 @@
     "test:unit": "jest",
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
-    "e2e": "start-server-and-test 'pnpm run start' http://127.0.0.1:3000 'pnpm run cypress'",
-    "e2e:headless": "start-server-and-test 'pnpm run start' http://127.0.0.1:3000 'pnpm run cypress:headless'"
+    "e2e": "start-server-and-test 'pnpm run build && pnpm run start' http://127.0.0.1:3000 'pnpm run cypress'",
+    "e2e:headless": "start-server-and-test 'pnpm run build && pnpm run start' http://127.0.0.1:3000 'pnpm run cypress:headless'"
   },
   "dependencies": {
     "commander": "^10.0.0",

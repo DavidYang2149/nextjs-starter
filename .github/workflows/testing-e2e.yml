@@ -22,7 +22,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -46,14 +46,14 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Run E2E tests
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v5
         with:
           browser: chrome
           start: |
             ls -al
             pnpm run dev
           wait-on: http://localhost:3000
-        continue-on-error: true
+        # continue-on-error: true
 
       # TODO: Create Report page
       # - name: Copy test execution videos
