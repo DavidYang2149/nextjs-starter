@@ -6,7 +6,7 @@ describe('메인 페이지', () => {
 
   describe('메인 페이지에서', () => {
 		it('메인 화면을 확인합니다', () => {
-			cy.contains('Get started by editing app/page.tsx');
+			cy.contains('Hello world!');
 		});
   });
 });
