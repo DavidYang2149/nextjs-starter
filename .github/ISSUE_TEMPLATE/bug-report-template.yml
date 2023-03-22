@@ -1,5 +1,8 @@
 name: 'Bug Report Template'
 description: 버그 리포트 템플릿입니다.
+title: "[Bug]"
+labels: ":fire: Bug"
+assignees: DavidYang2149
 body:
   - type: markdown
     attributes:
