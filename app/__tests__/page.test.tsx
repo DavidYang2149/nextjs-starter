@@ -13,6 +13,7 @@ describe('메인화면', () => {
       const { container } = render(<Home />);
 
       expect(container).toHaveTextContent(/Hello world!/i);
+      expect(container).toHaveTextContent(/Hello world!/i);
     });
   });
 });
