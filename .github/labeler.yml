@@ -1,0 +1,31 @@
+':sparkles: Feature':
+  - any: ['app/**/*', 'public/**/*', '!app/__tests__/**/*']
+':page_facing_up: Documentation':
+  - any: ['LICENSE', 'README.md', '**/*.md']
+  - all: ['!SECURITY.md']
+':fire_extinguisher: Test':
+  - '**/*.test.tsx'
+  - '**/*.test.ts'
+  - cypress/**/*
+':package: Package':
+  - package.json
+':gear: Environment':
+  - .github/**/*
+  - bin/**/*
+  - .eslintignore
+  - .eslintrc.json
+  - .gitignore
+  - .nvmrc
+  - cypress.config.ts
+  - next-env.d.ts
+  - package.json
+  - postcss.config.js
+  - renovate.json
+  - tailwind.config.js
+  - tsconfig.json
+':police_officer: Security':
+  - SECURITY.md
+':lipstick: Design':
+  - '**/*.css'
+  - tailwind.config.js
+  
