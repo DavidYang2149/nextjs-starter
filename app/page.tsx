@@ -10,6 +10,9 @@ export default function Home() {
         <h1 className="text-3xl font-bold underline">
           Hello world!
         </h1>
+        <h2 className="main-title">
+          Happy Coding
+        </h2>
         <p className={inter.className}>Explore the Next.js 13 playground.</p>
         <Image
           src="/next.svg"
