@@ -9,4 +9,4 @@ assignees: DavidYang2149
 
 # 제목
 ## 요구 사항
-- [ ] 
+- [x] 
