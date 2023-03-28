@@ -1,14 +1,18 @@
 ':sparkles: Feature':
-  - any: ['app/**/*', 'public/**/*', '!app/__tests__/**/*']
+  - 'app/**/*'
+  - 'public/**/*'
+  - '!app/__tests__/**/*'
 ':page_facing_up: Documentation':
-  - any: ['LICENSE', 'README.md', '**/*.md']
-  - all: ['!SECURITY.md']
+  - LICENSE
+  - README.md
+  - '**/*.md'
+  - '!SECURITY.md'
 ':fire_extinguisher: Test':
   - '**/*.test.tsx'
   - '**/*.test.ts'
   - cypress/**/*
 ':package: Package':
-  - package.json
+  - pnpm-lock.yaml
 ':gear: Environment':
   - .github/**/*
   - bin/**/*
