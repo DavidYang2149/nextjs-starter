@@ -1,12 +1,10 @@
 ':sparkles: Feature':
   - 'app/**/*'
   - 'public/**/*'
-  - '!app/__tests__/**/*'
 ':page_facing_up: Documentation':
   - LICENSE
   - README.md
   - '**/*.md'
-  - '!SECURITY.md'
 ':fire_extinguisher: Test':
   - '**/*.test.tsx'
   - '**/*.test.ts'
