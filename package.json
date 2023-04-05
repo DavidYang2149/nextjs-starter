@@ -15,7 +15,8 @@
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test 'pnpm run build && pnpm run start' http://127.0.0.1:3000 'pnpm run cypress'",
-    "e2e:headless": "start-server-and-test 'pnpm run build && pnpm run start' http://127.0.0.1:3000 'pnpm run cypress:headless'"
+    "e2e:headless": "start-server-and-test 'pnpm run build && pnpm run start' http://127.0.0.1:3000 'pnpm run cypress:headless'",
+    "prepare": "husky install"
   },
   "dependencies": {
     "commander": "^10.0.0",
@@ -53,7 +54,8 @@
     "start-server-and-test": "^2.0.0",
     "supertest": "^6.3.3",
     "tailwindcss": "^3.2.7",
-    "typescript": "5.0.3"
+    "typescript": "5.0.3",
+    "husky": "^8.0.0"
   },
   "repository": {
     "type": "git",

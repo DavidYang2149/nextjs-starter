@@ -70,6 +70,7 @@ const setupPackage = (projectName, projectPath) => {
   fs.unlinkSync(path.join(projectPath, 'auto-update-version.sh'));
   
   fs.rmSync('./.github', { recursive: true });
+  fs.rmSync('./.husky', { recursive: true });
   fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./bin', { recursive: true });
 

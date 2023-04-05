@@ -1,8 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
 # How to use
 # 1. git switch -c branch 'version-x.x.x' origin/main
-# 2. sh auto-update-version.sh
+# 2. gc (git commit)
+# 3. :wq (empty out)
 
 branch_name=$(git branch --show-current)
 
@@ -17,5 +19,7 @@ if [[ $branch_name == version-* ]]; then
     git add package.json
 
     # commit the changes with a custom message
-    git commit -m "🔖 버전을 v$version 으로 올려라"
+    git commit -m "🔖 버전을 v$version 으로 올려라" --no-verify
 fi
+
+exit 0
