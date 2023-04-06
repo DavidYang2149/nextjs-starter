@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+reflog_message=$(git reflog -1)
+
+regex="version-([0-9]+\.[0-9]+\.[0-9]+)"
+
+if [[ $current_branch == main ]] && [[ $reflog_message =~ $regex ]]; then
+  version=${BASH_REMATCH[1]}
+  git tag -a v$version -m "Release version $version"
+fi
+
+exit 0
