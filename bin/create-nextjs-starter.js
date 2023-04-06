@@ -2,7 +2,7 @@
 const path = require('path');
 const { program } = require('commander');
 
-const { setupFolder, setupPackage } = require('./validator');
+const { setupFolder, setupPackage, cleanPackage, pnpmSetupPackage } = require('./validator');
 
 program
   .arguments('<projectname>', 'Project name')
@@ -12,6 +12,9 @@ program
 
     setupFolder(projectPath);
     setupPackage(projectname, projectPath);
+
+    cleanPackage();
+    pnpmSetupPackage();
   });
 
 program.parse(process.argv);

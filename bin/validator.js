@@ -1,13 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { exec, execSync } = require('child_process');
 
 const { log } = console;
 
-const { errorStartLine, errorEndLine } = require('./constants');
-
+const { scriptStartLine, scriptEndLine, errorStartLine, errorEndLine } = require('./constants');
 
 const setupFolder = (projectPath) => {
+  log(scriptStartLine);
+  log('');
+
   try {
     fs.mkdirSync(projectPath);
   } catch (err) {
@@ -28,8 +30,6 @@ const setupFolder = (projectPath) => {
 };
 
 const setupPackage = (projectName, projectPath) => {
-  log('========================= 🚀 S T A R T 🚀 =========================');
-  
   log('dependencies:');
   log('\x1b[32m%s\x1b[0m', '- Next.js');
   log('\x1b[32m%s\x1b[0m', '- React');
@@ -67,24 +67,70 @@ const setupPackage = (projectName, projectPath) => {
   fs.unlinkSync(path.join(projectPath, 'SECURITY.md'));
   fs.unlinkSync(path.join(projectPath, 'LICENSE'));
   fs.unlinkSync(path.join(projectPath, 'renovate.json'));
-  fs.unlinkSync(path.join(projectPath, 'auto-update-version.sh'));
   
+  fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./.github', { recursive: true });
   fs.rmSync('./.husky', { recursive: true });
-  fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./bin', { recursive: true });
 
   log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
   log('');
+};
 
-  log('\x1b[35m%s\x1b[0m', '🎉 Setting is done, ready to use. Please type "pnpm install". Happy coding!');
-  log('========================= 🎉 E N D 🎉 =========================');
+const cleanPackage = () => {
+  const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
+    
+  log('🔥 Removing useless package.json setting');
   log('');
 
-  fs.readFile('./package.json', 'utf8', (err, data) => {
-    const { version } = JSON.parse(data);
-    log(`🏷️ Version: ${version}`);
+  delete packageJson.bin;
+  delete packageJson.scripts.prepare;
+  delete packageJson.dependencies.commander;
+  delete packageJson.devDependencies.husky;
+  
+  fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
+};
+
+const pnpmSetupPackage = () => {
+  exec('pnpm --version', (error) => {
+    if (error) {
+      log('pnpm is not installed.');
+      log('\x1b[35m%s\x1b[0m', '🎉 Setting is done, ready to use. Please type "pnpm install". Happy coding!');
+      process.exit(1);
+    }
+
+    exec('pnpm install', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error: ${error.message}`);
+        log('pnpm install failed.');
+        log('\x1b[35m%s\x1b[0m', '🎉 Setting is done, ready to use. Please type "pnpm install". Happy coding!');
+        process.exit(1);
+      }
+
+      if (stderr) {
+        console.error(`Standard error: ${stderr}`);
+        log('pnpm install failed.');
+        log('\x1b[35m%s\x1b[0m', '🎉 Setting is done, ready to use. Please type "pnpm install". Happy coding!');
+        process.exit(1);
+      }
+      
+      console.log(`Standard output: ${stdout}`);
+      log('\x1b[35m%s\x1b[0m', '🎉 Setting is done, ready to use. Happy coding!');
+      log('');
+      
+      log(scriptEndLine);
+      log('');
+      
+      fs.readFile('./package.json', 'utf8', (err, data) => {
+        const { version } = JSON.parse(data);
+        log(`🏷️ Version: ${version}`);
+        log('');
+      });
+    });
   });
 };
 
-module.exports = { setupFolder, setupPackage };
+module.exports = {
+  setupFolder, setupPackage,
+  cleanPackage, pnpmSetupPackage,
+};
