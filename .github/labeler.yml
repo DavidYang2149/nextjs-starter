@@ -13,6 +13,7 @@
   - pnpm-lock.yaml
 ':gear: Environment':
   - .github/**/*
+  - .husky/**/*
   - bin/**/*
   - .eslintignore
   - .eslintrc.json
