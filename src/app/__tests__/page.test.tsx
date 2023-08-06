@@ -5,7 +5,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Home from 'app/page';
+import Home from '@/app/page';
 
 describe('메인화면', () => {
   context('메인 화면으로 접속하면', () => {
