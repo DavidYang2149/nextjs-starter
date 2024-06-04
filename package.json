@@ -1,0 +1,51 @@
+{
+  "name": "@davidyang2149/nextjs-starter",
+  "version": "4.0.0",
+  "description": "Next.js starter with TypeScript, state tool, test tool",
+  "bin": {
+    "@davidyang2149/nextjs-starter": "./bin/create-nextjs-starter.js"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidYang2149/nextjs-starter.git"
+  },
+  "keywords": [
+    "Next.js",
+    "nextjs",
+    "Next.js starter",
+    "nextjs starter",
+    "starter",
+    "typescript",
+    "eslint",
+    "jest",
+    "testing-library",
+    "cypress"
+  ],
+  "author": "davidyang2149",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidYang2149/nextjs-starter/issues"
+  },
+  "homepage": "https://github.com/DavidYang2149/nextjs-starter#readme"
+}

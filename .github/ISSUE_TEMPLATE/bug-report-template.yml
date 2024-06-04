@@ -1,0 +1,70 @@
+name: 'Bug Report Template'
+description: 버그 리포트 템플릿입니다.
+title: "[Bug]"
+labels: ":fire: Bug"
+assignees: DavidYang2149
+body:
+  - type: markdown
+    attributes:
+      value: |
+        이슈를 보고해주셔서 감사합니다 :pray:.
+  - type: textarea
+    id: description
+    attributes:
+      label: 버그 내역
+      description: 발견된 버그 내용을 작성해주세요.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: 참조할 수 있는 링크를 알려주세요.
+      description: |
+        웹페이지의 링크
+      placeholder: |
+        내역이 없다면 .으로 작성해주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Describe the steps we have to take to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: 버그 발생 빈도
+      description: |
+        버그의 발생 빈도는 얼마나 되나요?
+      options:
+        - 항상
+        - 자주
+        - 가끔
+        - 한번
+  - type: textarea
+    id: screenshots_or_videos
+    attributes:
+      label: 스크린샷 혹은 비디오
+      description: |
+        참조할 수 있는 스크린샷이나 비디오를 올려주세요.
+        방법은 다음 링크를 확인해주세요: https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/attaching-files
+      placeholder: |
+        에디터에 사진이나 동영상을 드래그하여 내용을 올릴 수 있습니다.
+  - type: textarea
+    id: platform
+    attributes:
+      label: 플랫폼
+      description: |
+        작동 당시의 플랫폼을 적어주세요.
+      placeholder: |
+        - OS: [e.g. macOS, Windows, Linux, iOS, Android]
+        - Browser: [e.g. Chrome, Safari, Firefox, React Native]
+        - Version: [e.g. 91.1]
+    validations:
+      required: true
