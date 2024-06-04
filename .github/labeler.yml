@@ -18,16 +18,15 @@
   - .eslintrc.json
   - .gitignore
   - .nvmrc
-  - cypress.config.ts
   - next-env.d.ts
+  - next.config.mjs
   - package.json
-  - postcss.config.js
+  - playwright.config.ts
   - renovate.json
-  - tailwind.config.js
   - tsconfig.json
+  - vitest.config.ts
 ':police_officer: Security':
   - SECURITY.md
 ':lipstick: Design':
   - '**/*.css'
-  - tailwind.config.js
   

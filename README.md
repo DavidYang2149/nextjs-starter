@@ -16,7 +16,7 @@ npx @davidyang2149/nextjs-starter <project-directory>
 - ESLint
 - Vitest
 - Testing Library
-- Cypress
+- Playwright
 
 ## 🔖 Node Version in project
 
