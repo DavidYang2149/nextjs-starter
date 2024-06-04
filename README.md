@@ -12,10 +12,11 @@ npx @davidyang2149/nextjs-starter <project-directory>
 - TypeScript
 - Next.js
 - React
-- Jest
+- Zustand
+- ESLint
+- Vitest
 - Testing Library
 - Cypress
-- ESLint
 
 ## 🔖 Node Version in project
 
