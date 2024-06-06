@@ -1,5 +1,5 @@
 ':sparkles: Feature':
-  - 'app/**/*'
+  - 'src/app/**/*'
   - 'public/**/*'
 ':page_facing_up: Documentation':
   - LICENSE
@@ -8,7 +8,7 @@
 ':fire_extinguisher: Test':
   - '**/*.test.tsx'
   - '**/*.test.ts'
-  - cypress/**/*
+  - 'e2e/**/*'
 ':package: Package':
   - pnpm-lock.yaml
 ':gear: Environment':
