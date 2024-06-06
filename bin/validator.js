@@ -33,15 +33,13 @@ const setupPackage = (projectName, projectPath) => {
   log('dependencies:');
   log('\x1b[32m%s\x1b[0m', '- Next.js');
   log('\x1b[32m%s\x1b[0m', '- React');
-  log('\x1b[32m%s\x1b[0m', '- React-DOM');
+  log('\x1b[32m%s\x1b[0m', '- Zustand');
   log('');
 
   log('devDependencies:');
   log('\x1b[32m%s\x1b[0m', '- TypeScript');
   log('\x1b[32m%s\x1b[0m', '- ESLint');
-  log('\x1b[32m%s\x1b[0m', '- Jest');
-  log('\x1b[32m%s\x1b[0m', '- Testing-Library');
-  log('\x1b[32m%s\x1b[0m', '- Cypress');
+  log('\x1b[32m%s\x1b[0m', '- Vitest');
   log('');
 
   log('⭐ Next.js Starter Kit ⭐');
@@ -70,7 +68,6 @@ const setupPackage = (projectName, projectPath) => {
   
   fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./.github', { recursive: true });
-  fs.rmSync('./.husky', { recursive: true });
   fs.rmSync('./bin', { recursive: true });
 
   log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
@@ -84,9 +81,7 @@ const cleanPackage = () => {
   log('');
 
   delete packageJson.bin;
-  delete packageJson.scripts.prepare;
   delete packageJson.dependencies.commander;
-  delete packageJson.devDependencies.husky;
   
   fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
 };

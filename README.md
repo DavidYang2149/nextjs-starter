@@ -12,16 +12,17 @@ npx @davidyang2149/nextjs-starter <project-directory>
 - TypeScript
 - Next.js
 - React
-- Jest
-- Testing Library
-- Cypress
+- Zustand
 - ESLint
+- Vitest
+- Testing Library
+- Playwright
 
 ## 🔖 Node Version in project
 
 ```sh
 # .nvmrc
-v18.14.0
+v20.14.0
 ```
 If you want to manage nvm. recommend to use [fnm(Fast Node Manager)](https://github.com/Schniz/fnm)
 

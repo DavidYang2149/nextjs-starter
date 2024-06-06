@@ -1,5 +1,5 @@
 ':sparkles: Feature':
-  - 'app/**/*'
+  - 'src/app/**/*'
   - 'public/**/*'
 ':page_facing_up: Documentation':
   - LICENSE
@@ -8,27 +8,25 @@
 ':fire_extinguisher: Test':
   - '**/*.test.tsx'
   - '**/*.test.ts'
-  - cypress/**/*
+  - 'e2e/**/*'
 ':package: Package':
   - pnpm-lock.yaml
 ':gear: Environment':
   - .github/**/*
-  - .husky/**/*
   - bin/**/*
   - .eslintignore
   - .eslintrc.json
   - .gitignore
   - .nvmrc
-  - cypress.config.ts
   - next-env.d.ts
+  - next.config.mjs
   - package.json
-  - postcss.config.js
+  - playwright.config.ts
   - renovate.json
-  - tailwind.config.js
   - tsconfig.json
+  - vitest.config.ts
 ':police_officer: Security':
   - SECURITY.md
 ':lipstick: Design':
   - '**/*.css'
-  - tailwind.config.js
   
