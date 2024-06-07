@@ -12,9 +12,11 @@ jobs:
             version: ${{ steps.check.outputs.version }}
         steps:
             - uses: actions/checkout@v3
+              env:
+                MESSAGE: ${{ github.event.head_commit.message }}      
             - name: Check commit message
               id: check
-              run: echo "version=$(echo '${{ github.event.head_commit.message }}' | grep -oP '^Update version to \K.*$')" >> $GITHUB_OUTPUT
+              run: echo "version=$(echo "$MESSAGE" | grep -oP '^Update version to \K.*$')" >> $GITHUB_OUTPUT
               shell: bash
     create-tag:
         runs-on: ubuntu-latest
