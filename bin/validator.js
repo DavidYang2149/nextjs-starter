@@ -69,7 +69,6 @@ const setupPackage = (projectName, projectPath) => {
   fs.rmSync('./.git', { recursive: true });
   fs.rmSync('./.github', { recursive: true });
   fs.rmSync('./bin', { recursive: true });
-  fs.rmSync('./scripts', { recursive: true });
 
   log('\x1b[36m%s\x1b[0m', 'Successfully installed!');
   log('');
@@ -82,8 +81,6 @@ const cleanPackage = () => {
   log('');
 
   delete packageJson.bin;
-  delete packageJson.scripts.prepublish;
-  delete packageJson.scripts.update-version;
   delete packageJson.dependencies.commander;
   delete packageJson.keywords;
   delete packageJson.repository;
