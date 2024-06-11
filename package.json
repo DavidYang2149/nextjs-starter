@@ -1,6 +1,6 @@
 {
   "name": "@davidyang2149/nextjs-starter",
-  "version": "4.1.3",
+  "version": "4.1.4",
   "description": "Next.js starter with TypeScript, state tool, test tool",
   "bin": {
     "@davidyang2149/nextjs-starter": "./bin/create-nextjs-starter.js"
