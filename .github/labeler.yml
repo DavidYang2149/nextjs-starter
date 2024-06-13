@@ -8,6 +8,8 @@
 ':fire_extinguisher: Test':
   - '**/*.test.tsx'
   - '**/*.test.ts'
+  - '**/*.spec.tsx'
+  - '**/*.spec.ts'
   - 'e2e/**/*'
 ':package: Package':
   - pnpm-lock.yaml
