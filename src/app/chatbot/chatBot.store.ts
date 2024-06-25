@@ -12,11 +12,11 @@ type ChatState = {
   setInput: (input: string) => void;
 };
 
-const useChatStore = create<ChatState>((set) => ({
+const chatBotStore = create<ChatState>((set) => ({
   messages: [],
   input: '',
   addMessage: (message) => set((state) => ({ messages: [...state.messages, message] })),
   setInput: (input) => set(() => ({ input })),
 }));
 
-export default useChatStore;
+export default chatBotStore;

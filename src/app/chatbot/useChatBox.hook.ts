@@ -1,7 +1,7 @@
-import useChatStore, { Message } from "./chatbot.store";
+import chatBotStore, { Message } from './chatBot.store';
 
 export const useChatBox = () => {
-  const { messages, input, addMessage, setInput } = useChatStore();
+  const { messages, input, addMessage, setInput } = chatBotStore();
 
   const handleSend = async () => {
     if (input.trim() === '') return;
