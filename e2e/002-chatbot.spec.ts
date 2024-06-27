@@ -5,7 +5,6 @@ test.beforeEach(async ({ page }) => {
   await page.goto('http://localhost:3000/chatbot');
 });
 
-
 describe('챗봇 페이지에서', () => {
   context('처음 접속하면', () => {
     it('챗봇 화면이 보입니다', async ({ page }) => {
