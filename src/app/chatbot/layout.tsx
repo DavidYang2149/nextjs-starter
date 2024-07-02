@@ -21,9 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Script src="https://cdn.tailwindcss.com" />
-      <body className={inter.className}>{children}</body>
-    </html>
+    <>
+      <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" defer />
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
+    </>
   );
 }
