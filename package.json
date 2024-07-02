@@ -29,7 +29,7 @@
     "@types/react-dom": "^18",
     "@vitejs/plugin-react": "^4.3.0",
     "@vitest/coverage-v8": "^1.6.0",
-    "eslint": "^8",
+    "eslint": "^9.0.0",
     "eslint-config-next": "14.2.4",
     "jsdom": "^24.1.0",
     "playwright-dci-pattern": "0.1.4",
