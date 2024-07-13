@@ -1,4 +1,4 @@
-import ChatBot from '@/app/chatbot/ChatBot.component';
+import ChatBot from "./_components/chat-bot";
 
 const Home: React.FC = () => {
   return (<ChatBot />);

@@ -1,6 +1,6 @@
 'use client';
 
-import { useChatBox } from './useChatBox.hook';
+import { useChatBox } from "../_hooks/use-chat-box";
 
 const ChatBot: React.FC = () => {
   const { messages, input, handleSend, handleChange, handleKeyPress } = useChatBox();
