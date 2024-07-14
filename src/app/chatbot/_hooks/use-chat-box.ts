@@ -1,4 +1,4 @@
-import chatBotStore, { Message } from './chatBot.store';
+import chatBotStore, { Message } from '../_store/chat-box';
 
 export const useChatBox = () => {
   const { messages, input, addMessage, setInput } = chatBotStore();
