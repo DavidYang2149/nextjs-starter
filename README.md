@@ -1,4 +1,5 @@
 # Next.js starter
+
 - GitHub: [Next.js starter kit](https://github.com/DavidYang2149/nextjs-starter)
 - npm: [Download](https://www.npmjs.com/package/@davidyang2149/nextjs-starter)
 
@@ -9,6 +10,7 @@ npx @davidyang2149/nextjs-starter <project-directory>
 ```
 
 ## 💎 Tech stack 
+
 - TypeScript
 - Next.js
 - React
